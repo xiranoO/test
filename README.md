@@ -7,7 +7,29 @@
 - 相关代码文件定位，并返回匹配行
 - 复现步骤、待确认信息和修复方案生成
 - 回复草稿生成
-- 人工批准后的模拟提交
+- 人工审批后的模拟提交，以及显式启用的受控真实评论发布
+
+## 界面预览
+
+### 批量 Issue 分析队列
+
+按 Issue 编号从小到大展示仓库中的 Open Issues，支持全选、清空和最多 10 条顺序分析。
+
+![Issue Lens 批量 Issue 分析队列](docs/images/issue-queue.png)
+
+### 基于证据的分析报告
+
+报告集中展示分类、优先级、模块、评论证据、疑似重复项、相关代码、复现信息、修复方向和可编辑回复草稿。
+
+![Issue Lens 分析报告](docs/images/analysis-report.png)
+
+### 人工审批与安全确认
+
+提交默认保持在模拟模式；草稿经过人工编辑后会重新生成校验码。只有显式切换到真实发布并输入与目标 Issue 匹配的确认短语，才允许创建 GitHub 评论。
+
+<p align="center">
+  <img src="docs/images/approval-dialog.png" width="460" alt="Issue Lens 模拟提交确认对话框">
+</p>
 
 ## Web 审批工作台
 

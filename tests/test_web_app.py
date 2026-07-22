@@ -52,6 +52,10 @@ class WebAppTests(unittest.TestCase):
         page = self.client.get("/")
         self.assertEqual(page.status_code, 200)
         self.assertIn("Issue Lens", page.text)
+        self.assertIn('id="phrase-field" hidden', page.text)
+        stylesheet = self.client.get("/static/styles.css")
+        self.assertEqual(stylesheet.status_code, 200)
+        self.assertIn("[hidden]{display:none!important}", stylesheet.text)
         with patch.dict("os.environ", {}, clear=True):
             health = self.client.get("/health").json()
         self.assertEqual(health["status"], "ok")
