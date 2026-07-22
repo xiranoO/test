@@ -1,0 +1,21 @@
+[
+  {
+    "issue_number": 101,
+    "expected_type": "bug",
+    "expected_component": "authentication",
+    "expected_duplicate": 42,
+    "expected_file_suffix": "src/auth/token.py"
+  },
+  {
+    "issue_number": 42,
+    "expected_type": "bug",
+    "expected_component": "api",
+    "expected_duplicate": 101,
+    "expected_file_suffix": "src/auth/token.py"
+  },
+  {
+    "issue_number": 77,
+    "expected_type": "feature",
+    "expected_component": "ui"
+  }
+]
