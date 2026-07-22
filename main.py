@@ -1,5 +1,2 @@
-from issue_agent.cli import main
-
-
-if __name__ == "__main__":
-    main()
+﻿print("Hello Git")
+print("I am learning Python development")
