@@ -22,3 +22,5 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - run: python evaluate.py --min-score 0.80
       - run: python -m compileall -q issue_agent main.py web_main.py evaluate.py
+      - run: docker build -t issue-lens:ci .
+      - run: docker run --rm issue-lens:ci git --version
